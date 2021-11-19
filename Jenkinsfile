@@ -2,7 +2,7 @@ node{
     def mvnHome
  
    stage('SetEnv') { 
-      git 'https://github.com/cltalam/Snykscriptbasedintegration.git'
+      git 'https://github.com/kksub/chandu-lal-repo-clone.git'
       mvnHome = tool 'MAVEN_HOME'
 	   
    }
@@ -14,7 +14,7 @@ node{
       
    }
    stage('Snyk'){
-        snykSecurity failOnIssues: false, organisation: '0a9abaf4-c5e7-4e79-bd0d-94090771174a', snykInstallation: 'snyknew', snykTokenId: 'snykkey'
+        snykSecurity failOnIssues: false, organisation: '0c376519-722a-4aef-b7fc-f20d34e1bc2f', snykInstallation: 'subhas snyk', snykTokenId: 'snyk_key_sub'
        
    }
 
